@@ -1,0 +1,112 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap");
+
+/* налаштування видимої частини браузера */
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* налаштування основного контейнера */
+.wrappper {
+  max-width: 1010px;
+}
+
+/* відключення властивостей, призначених браузером */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* два пункти списку - це два елементи для FAQ */
+li {
+  margin-bottom: 75px;
+}
+
+/* відключення властивостей, призначених браузером */
+a {
+  text-decoration: none;
+}
+
+/* налаштування шапки елементу */
+.question {
+  background: white;
+  border: 5px solid #000000;
+  padding: 25px 38px 25px 130px;
+  color: black;
+  font-weight: 800;
+  font-size: 1.5rem;
+  position: relative;
+  width: calc(100% - 55px);
+  box-sizing: border-box;
+}
+
+/* налаштування фону під зображенням шапки */
+.question::before {
+  content: "";
+  display: block;
+  background: black;
+  width: 102px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* налаштування фону під шапкою та перемикачі */
+.question::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  right: -55px;
+  top: 15px;
+  height: calc(100% + 15px);
+  background: #f0f0f0 url(./images/chevron.svg) calc(100% - 12px) 20px no-repeat;
+  z-index: -1;
+}
+
+/* зміна кольорового фону в розгорнутому стані */
+a:hover .question::after {
+  background: #ffdd00;
+}
+
+/* зміна типу перемикачів */
+.expand .question::after {
+  background: #ffdd00 url(./images/close.svg) calc(100% - 12px) 20px no-repeat;
+}
+
+/* налаштування зображення в шапці */
+.question-mark {
+  position: absolute;
+  left: 10px;
+  top: -45px;
+}
+
+/* відключення блоку-відповіді */
+.answer {
+  display: none;
+}
+
+/* налаштування абзацу у блока-відповіді */
+.answer p {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+}
+
+/* налаштування розгорнутого блока-відповіді */
+.expand .answer {
+  display: block;
+  background-color: #ffdd00;
+  width: calc(100% - 60px);
+  margin-left: 55px;
+  padding: 30px 75px;
+  box-sizing: border-box;
+}
