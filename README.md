@@ -1,0 +1,2 @@
+# FAQ-block
+training course
