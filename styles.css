@@ -73,9 +73,9 @@ a {
 }
 
 /* зміна кольорового фону в розгорнутому стані */
-a:hover .question::after {
+/* a:hover .question::after {
   background: #ffdd00;
-}
+} */
 
 /* зміна типу перемикачів */
 .expand .question::after {
